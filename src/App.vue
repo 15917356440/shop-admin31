@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    index<el-button type="primary">主要按钮</el-button>
+    <el-button type="primary">主要按钮</el-button>
     <p>
       <router-view></router-view>
     </p>
@@ -9,7 +9,7 @@
 
 <script>
 
-import axios from "axios"
+// import axios from "axios"
 export default {
   mounted(){
     //请求测试接口
@@ -28,7 +28,7 @@ export default {
     this.axios({
       url:"https://api.github.com/users",
       method:"GET",
-    }).then(function(res){
+    }).then(res=>{
       console.log(res)
     })
   }
